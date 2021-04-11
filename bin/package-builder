@@ -2,7 +2,7 @@
 
 <?php
 
-use Overtrue\PackageBuilder\Application;
+use JimChen\PackageBuilder\Application;
 
 if (file_exists(dirname(dirname(__FILE__)).'/vendor/autoload.php')) {
     require_once dirname(dirname(__FILE__)).'/vendor/autoload.php';

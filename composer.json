@@ -1,15 +1,15 @@
 {
-    "name": "overtrue/package-builder",
+    "name": "jimchen/package-builder",
     "description": "A composer package builder.",
     "keywords": ["composer", "package", "php", "package-builder"],
     "autoload": {
         "psr-4": {
-            "Overtrue\\PackageBuilder\\": "src"
+            "JimChen\\PackageBuilder\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Overtrue\\Tests\\": "tests/"
+            "JimChen\\Tests\\": "tests/"
         }
     },
     "require": {
