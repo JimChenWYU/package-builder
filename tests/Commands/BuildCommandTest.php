@@ -25,7 +25,7 @@ class BuildCommandTest extends TestCase
      */
     protected $commandTester;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -34,7 +34,7 @@ class BuildCommandTest extends TestCase
         $this->commandTester = new CommandTester($this->command);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         parent::tearDown();
 
@@ -78,7 +78,7 @@ class BuildCommandTest extends TestCase
         $this->assertFileExists(TEST_TEMP_DIR.'/.gitattributes');
         $this->assertFileExists(TEST_TEMP_DIR.'/.gitignore');
 
-        $this->assertContains('test\/package-name', file_get_contents(TEST_TEMP_DIR.'/composer.json'));
+        $this->assertStringContainsString('test\/package-name', file_get_contents(TEST_TEMP_DIR.'/composer.json'));
     }
 
     public function testBuildPackageWithTestAndPhpCsConfig()
