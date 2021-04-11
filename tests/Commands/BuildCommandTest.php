@@ -107,6 +107,8 @@ class BuildCommandTest extends TestCase
         $this->assertFileExists(TEST_TEMP_DIR.'/.gitignore');
         $this->assertFileExists(TEST_TEMP_DIR.'/phpunit.xml.dist');
         $this->assertFileExists(TEST_TEMP_DIR.'/.php_cs');
+        $this->assertFileExists(TEST_TEMP_DIR.'/.github/workflows/php-cs-fixer.yml');
+        $this->assertFileExists(TEST_TEMP_DIR.'/.github/workflows/run-tests.yml');
     }
 
     public function clearTestTempDir()

@@ -241,6 +241,10 @@ class BuildCommand extends Command
     {
         $this->fs->dumpFile($this->packageDirectory.'/tests/.gitkeep', '');
         $this->copyFile('phpunit_config', 'phpunit.xml.dist');
+        if (! $this->fs->exists($this->packageDirectory . '/.github/workflows/')) {
+	        $this->fs->mkdir($this->packageDirectory . '/.github/workflows/', 0755);
+        }
+        $this->copyFile('workflow_run-tests', '.github/workflows/run-tests.yml');
     }
 
     /**
@@ -249,6 +253,10 @@ class BuildCommand extends Command
     protected function createCSFixerConfiguration()
     {
         $this->copyFile('php_cs', '.php_cs');
+	    if (! $this->fs->exists($this->packageDirectory . '/.github/workflows/')) {
+		    $this->fs->mkdir($this->packageDirectory . '/.github/workflows/', 0755);
+	    }
+	    $this->copyFile('workflow_php-cs-fixer', '.github/workflows/php-cs-fixer.yml');
     }
 
     /**
