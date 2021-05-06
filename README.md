@@ -58,7 +58,7 @@ vendor-product
 $ package-builder update
 ```
 
-## Be careful!!!
+# Be careful!!!
 
 The latest version is using `friendsofphp/php-cs-fixer:3.x`
 
