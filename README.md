@@ -1,7 +1,8 @@
 <h1 align="center"> Package Builder </h1>
 
-<p align="center"> :package: A composer package builder.</p>
+[![Run tests](https://github.com/JimChenWYU/package-builder/actions/workflows/php.yml/badge.svg)](https://github.com/JimChenWYU/package-builder/actions/workflows/php.yml)
 
+:package: A composer package builder.
 
 # Installation
 
@@ -56,6 +57,12 @@ vendor-product
 ```shell
 $ package-builder update
 ```
+
+## Be careful!!!
+
+The latest version is using `friendsofphp/php-cs-fixer:3.x`
+
+If want to use `friendsofphp/php-cs-fixer:2.x`, please install `jimchen/package-builder:1.x`
 
 # Contributing
 
