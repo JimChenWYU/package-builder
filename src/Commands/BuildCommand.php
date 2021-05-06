@@ -252,7 +252,8 @@ class BuildCommand extends Command
      */
     protected function createCSFixerConfiguration()
     {
-        $this->copyFile('php_cs', '.php_cs');
+        // $this->copyFile('php_cs', '.php_cs');
+	    $this->copyFile('php-cs-fixer', '.php-cs-fixer.php');
 	    if (! $this->fs->exists($this->packageDirectory . '/.github/workflows/')) {
 		    $this->fs->mkdir($this->packageDirectory . '/.github/workflows/', 0755);
 	    }
